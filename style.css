@@ -174,6 +174,72 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
   font-size: 0.9rem;
 }
 
+.pill-label {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 26px 0 12px;
+  color: var(--muted);
+}
+
+/* Journey timeline: a thin line down the left with a dot per entry */
+.timeline {
+  list-style: none;
+  position: relative;
+  padding-left: 32px;
+}
+.timeline::before {            /* the vertical line */
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: var(--line);
+}
+.tl-item {
+  position: relative;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px 26px;
+  margin-bottom: 22px;
+}
+.tl-item::before {             /* the dot */
+  content: "";
+  position: absolute;
+  left: -31px;
+  top: 30px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--cream);
+  border: 2px solid var(--rose);
+}
+.tl-date {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rose);
+  display: inline-block;
+  margin-right: 10px;
+}
+.tl-item h3 { font-size: 1.5rem; margin: 6px 0 2px; }
+.tl-org { color: var(--muted); font-size: 0.95rem; margin-bottom: 10px; }
+.tl-item ul { padding-left: 18px; font-size: 0.95rem; }
+.tl-item ul li { margin-bottom: 4px; }
+.tl-item > p:last-child { font-size: 0.95rem; }
+
+/* Small coloured labels */
+.tag {
+  font-size: 0.72rem;
+  padding: 3px 10px;
+  border-radius: 999px;
+  vertical-align: 2px;
+}
+.tag-work   { background: var(--blush); color: var(--rose-dark); }
+.tag-edu    { background: #e6ebe3; color: #5c6f55; }   /* soft sage */
+.tag-impact { background: #efe6d4; color: #8a6d3b; }   /* soft gold */
+
 /* Contact */
 .contact { text-align: center; }
 .contact > p { color: var(--muted); margin-bottom: 24px; }
