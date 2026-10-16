@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" role="img" aria-labelledby="dance-title">
+  <title id="dance-title">Line drawing of a dancer mid-spin with a flowing skirt and music notes</title>
+  <style>
+    .ink   { fill: none; stroke: #1d2f4a; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .red   { fill: none; stroke: #8c2a37; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .tint  { fill: #f6e9eb; }
+    .note  { fill: #2f5d8a; opacity: .7; }
+    .noteS { fill: none; stroke: #2f5d8a; stroke-width: 1.2; stroke-linecap: round; opacity: .7; }
+    .green { fill: none; stroke: #4c7a62; stroke-width: 1.2; stroke-linecap: round; opacity: .8; }
+  </style>
+
+  <!-- motion swirl on the floor -->
+  <path class="green" d="M40 128 C60 136 100 136 122 128"/>
+
+  <!-- skirt -->
+  <path class="tint" d="M74 72 C64 86 52 98 40 104 C58 110 96 110 114 100 C104 94 92 84 86 72 Z"/>
+  <path class="red" d="M74 72 C64 86 52 98 40 104 C58 110 96 110 114 100 C104 94 92 84 86 72"/>
+  <path class="red" d="M60 96 C72 100 92 100 104 94"/>
+
+  <!-- head -->
+  <circle class="ink" cx="80" cy="30" r="8"/>
+  <!-- body -->
+  <path class="ink" d="M80 38 C79 50 76 62 74 72 M80 38 C82 50 85 62 86 72"/>
+  <path class="ink" d="M74 72 H86"/>
+  <!-- arms: one raised, one sweeping out -->
+  <path class="ink" d="M79 44 C70 36 62 26 58 14"/>
+  <path class="ink" d="M81 44 C92 46 104 44 114 36"/>
+  <!-- legs: one standing, one lifted -->
+  <path class="ink" d="M78 106 L76 128"/>
+  <path class="ink" d="M88 104 C96 112 104 114 112 112"/>
+
+  <!-- music notes -->
+  <ellipse class="note" cx="124" cy="22" rx="4" ry="3"/>
+  <path class="noteS" d="M128 22 V8 L136 6"/>
+  <ellipse class="note" cx="30" cy="48" rx="3.5" ry="2.6"/>
+  <path class="noteS" d="M33.5 48 V36"/>
+</svg>
