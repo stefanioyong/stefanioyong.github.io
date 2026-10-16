@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -14 800 204" role="img" aria-labelledby="skyline-title">
+  <title id="skyline-title">Line drawing of the Jakarta skyline with the National Monument, joined by a dotted flight path to the Seattle skyline with the Space Needle and Mount Rainier</title>
+  <style>
+    .ink   { fill: #fcfcfa; stroke: #1d2f4a; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .thin  { fill: none; stroke: #1d2f4a; stroke-width: 1; stroke-linecap: round; opacity: .55; }
+    .red   { fill: none; stroke: #8c2a37; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .flame { fill: #8c2a37; }
+    .green { fill: none; stroke: #4c7a62; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+    .blue  { fill: none; stroke: #2f5d8a; stroke-width: 1.2; stroke-linecap: round; opacity: .7; }
+    .path  { fill: none; stroke: #8c2a37; stroke-width: 1.2; stroke-dasharray: 2 6; stroke-linecap: round; opacity: .8; }
+    .label { font-family: Inter, system-ui, sans-serif; font-size: 11px; letter-spacing: 3.5px; fill: #5d6b7e; }
+    .sun   { fill: #f6e9eb; }
+  </style>
+
+  <!-- ===== JAKARTA (left) ===== -->
+  <circle class="sun" cx="96" cy="56" r="26"/>
+  <!-- towers -->
+  <path class="ink" d="M30 150 V96 H58 V150"/>
+  <path class="thin" d="M38 106 V140 M44 106 V140 M50 106 V140"/>
+  <path class="ink" d="M64 150 V70 L78 60 L92 70 V150"/>
+  <path class="thin" d="M71 82 H85 M71 94 H85 M71 106 H85 M71 118 H85 M71 130 H85"/>
+  <path class="ink" d="M98 150 V112 H122 V150"/>
+  <!-- Monas (National Monument) -->
+  <path class="ink" d="M140 150 L152 134 H228 L240 150"/>
+  <path class="ink" d="M160 134 V128 H220 V134"/>
+  <path class="ink" d="M184 128 L188 46 H192 L196 128"/>
+  <path class="ink" d="M183 46 H197"/>
+  <path class="flame" d="M190 22 C195 30 198 34 196 40 C195 44 185 44 184 40 C182 34 187 30 190 22 Z"/>
+  <!-- more towers -->
+  <path class="ink" d="M258 150 V88 H284 V150"/>
+  <path class="thin" d="M265 98 V140 M271 98 V140 M277 98 V140"/>
+  <path class="ink" d="M290 150 V60 H306 L318 52 V150"/>
+  <path class="thin" d="M296 72 H312 M296 86 H312 M296 100 H312 M296 114 H312 M296 128 H312"/>
+  <path class="ink" d="M324 150 V118 H346 V150"/>
+  <!-- palm -->
+  <path class="green" d="M360 150 C362 132 364 118 362 104"/>
+  <path class="green" d="M362 104 C354 98 346 100 342 106 M362 104 C370 97 378 99 382 105 M362 104 C358 94 352 90 346 90 M362 104 C368 94 374 91 380 92"/>
+
+  <!-- ===== Flight path across the Pacific ===== -->
+  <path class="path" d="M190 16 C330 -8 470 -8 602 12"/>
+  <path class="blue" d="M392 162 q8 -5 16 0 t16 0 M402 172 q8 -5 16 0 t16 0"/>
+
+  <!-- ===== SEATTLE (right) ===== -->
+  <!-- Mount Rainier -->
+  <path class="green" d="M470 150 L560 84 C572 76 580 74 590 80 L700 150"/>
+  <path class="green" d="M548 93 L560 98 L570 90 L582 97 L594 88"/>
+  <!-- towers -->
+  <path class="ink" d="M486 150 V112 H508 V150"/>
+  <path class="ink" d="M514 150 V92 H536 V150"/>
+  <path class="thin" d="M520 102 V140 M525 102 V140 M530 102 V140"/>
+  <!-- Space Needle -->
+  <path class="ink" d="M590 150 L598 66 M614 150 L606 66"/>
+  <path class="ink" d="M594 112 H610"/>
+  <path class="ink" d="M580 62 C584 54 620 54 624 62 C620 70 584 70 580 62 Z"/>
+  <path class="ink" d="M588 56 C594 50 610 50 616 56"/>
+  <path class="ink" d="M602 50 V16"/>
+  <!-- downtown -->
+  <path class="ink" d="M640 150 V84 H664 V150"/>
+  <path class="thin" d="M646 94 H658 M646 106 H658 M646 118 H658 M646 130 H658"/>
+  <path class="ink" d="M670 150 V58 L686 50 L702 58 V150"/>
+  <path class="thin" d="M678 68 V140 M686 68 V140 M694 68 V140"/>
+  <path class="ink" d="M708 150 V100 H730 V150"/>
+  <path class="ink" d="M736 150 V76 H756 V150"/>
+  <!-- evergreen -->
+  <path class="green" d="M774 150 V136 M774 104 L764 122 H770 L762 136 H786 L778 122 H784 Z"/>
+
+  <!-- ground line -->
+  <path class="ink" d="M16 150 H384 M440 150 H790"/>
+
+  <!-- labels -->
+  <text class="label" x="190" y="178" text-anchor="middle">JAKARTA</text>
+  <text class="label" x="602" y="178" text-anchor="middle">SEATTLE</text>
+</svg>
