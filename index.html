@@ -13,8 +13,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Link to our stylesheet, which controls colours, fonts and layout -->
-  <!-- The ?v=13 makes browsers fetch the newest styles. Raise the number when you change style.css. -->
-  <link rel="stylesheet" href="style.css?v=13">
+  <!-- The ?v=15 makes browsers fetch the newest styles. Raise the number when you change style.css. -->
+  <link rel="stylesheet" href="style.css?v=15">
 </head>
 <body>
 
@@ -50,29 +50,8 @@
         <img src="analysis-energy.svg" alt="Line drawing of a rising chart with a shaded risk band, linked by a dotted line to wind turbines and a solar panel">
       </figure>
 
-      <!-- At a glance: four numbers from my experience -->
-      <h2>At a glance</h2>
-      <div class="stats">
-        <div class="stat">
-          <p class="stat-number">$30K+</p>
-          <p class="stat-label">in claims resolved within three months</p>
-        </div>
-        <div class="stat">
-          <p class="stat-number">983</p>
-          <p class="stat-label">villagers reached by a clean water project I led</p>
-        </div>
-        <div class="stat">
-          <p class="stat-number">16</p>
-          <p class="stat-label">team members led across sourcing and procurement</p>
-        </div>
-        <div class="stat">
-          <p class="stat-number">2</p>
-          <p class="stat-label">University of Washington degrees, B.A. and M.S.</p>
-        </div>
-      </div>
-
       <!-- Focus areas: three cards, each with its own accent colour -->
-      <h2 class="spaced">What I'm working toward</h2>
+      <h2>What I'm working toward</h2>
       <div class="cards">
         <article class="card card-red">
           <h3>Risk management</h3>
@@ -210,7 +189,7 @@
         <div class="tl-item tl-edu">
           <p class="tl-date">Expected Dec 2027</p>
           <h3>M.S. Computational Finance &amp; Risk Management</h3>
-          <p class="tl-org">University of Washington</p>
+          <p class="tl-org"><a class="school" href="https://www.washington.edu" target="_blank" rel="noopener"><span class="school-mark">UW</span>University of Washington</a></p>
         </div>
 
         <div class="tl-item tl-work">
@@ -227,7 +206,7 @@
         <div class="tl-item tl-lead">
           <p class="tl-date">2024 — 2025</p>
           <h3>Fundraising &amp; Sponsorship Officer</h3>
-          <p class="tl-org">Solar Chapter</p>
+          <p class="tl-org"><a class="org-link" href="https://www.solarchapter.com" target="_blank" rel="noopener"><img class="org-logo" src="solar-chapter-logo.png" alt="Solar Chapter logo"></a><a href="https://www.solarchapter.com" target="_blank" rel="noopener">Solar Chapter</a></p>
           <p class="tl-note">Returned to lead fundraising and sponsorships after a year away.</p>
         </div>
 
@@ -245,7 +224,7 @@
         <div class="tl-item tl-lead">
           <p class="tl-date">Sep 2022 — 2023</p>
           <h3>President &amp; Lead Project Manager</h3>
-          <p class="tl-org">Solar Chapter · Seattle branch</p>
+          <p class="tl-org"><a class="org-link" href="https://www.solarchapter.com" target="_blank" rel="noopener"><img class="org-logo" src="solar-chapter-logo.png" alt="Solar Chapter logo"></a><a href="https://www.solarchapter.com" target="_blank" rel="noopener">Solar Chapter</a> · Seattle branch</p>
           <ul>
             <li>Managed a $15,000 clean water project benefiting 983 villagers in Golo Ketak, Indonesia.</li>
             <li>Led a team of 16 to source suppliers, evaluate costs and negotiate procurement.</li>
@@ -258,7 +237,7 @@
         <div class="tl-item tl-edu">
           <p class="tl-date">Aug 2023</p>
           <h3>B.A. Operations &amp; Supply Chain Management and Information Systems</h3>
-          <p class="tl-org">University of Washington, Foster School of Business</p>
+          <p class="tl-org"><a class="school" href="https://www.washington.edu" target="_blank" rel="noopener"><span class="school-mark">UW</span>University of Washington, Foster School of Business</a></p>
           <p class="tl-note">Dean's List · Strategic Management Case Competition Runner-Up</p>
         </div>
 
@@ -287,7 +266,7 @@
         <div class="tl-item tl-lead">
           <p class="tl-date">Oct 2021 — Sep 2022</p>
           <h3>Fundraising Officer</h3>
-          <p class="tl-org">Solar Chapter</p>
+          <p class="tl-org"><a class="org-link" href="https://www.solarchapter.com" target="_blank" rel="noopener"><img class="org-logo" src="solar-chapter-logo.png" alt="Solar Chapter logo"></a><a href="https://www.solarchapter.com" target="_blank" rel="noopener">Solar Chapter</a></p>
           <ul>
             <li>Raised more than $1,500 in five hours by selling traditional Indonesian food.</li>
             <li>Developed fundraising strategies with two other officers and applied for opportunities monthly.</li>
@@ -325,7 +304,7 @@
         <div class="tl-item tl-edu">
           <p class="tl-date">Mar 2021</p>
           <h3>Associate in Arts, Business Administration</h3>
-          <p class="tl-org">Edmonds College</p>
+          <p class="tl-org"><a class="school" href="https://www.edmonds.edu" target="_blank" rel="noopener"><span class="school-mark">EC</span>Edmonds College</a></p>
           <p class="tl-note">Complete the Dream Scholarship (Jan 2021)</p>
         </div>
 
@@ -388,6 +367,44 @@
            </article> -->
     <section id="projects" class="page section">
       <h2>Projects</h2>
+
+      <!-- Featured project: the Solar Chapter clean water project -->
+      <h3 class="subhead">Featured</h3>
+      <article class="featured">
+        <div class="featured-head">
+          <a href="https://www.solarchapter.com" target="_blank" rel="noopener">
+            <img class="featured-logo" src="solar-chapter-logo.png" alt="Solar Chapter logo">
+          </a>
+          <div>
+            <p class="project-tag">Solar Chapter · 2022 — 2023</p>
+            <h4>Clean water for Golo Ketak, Indonesia</h4>
+          </div>
+        </div>
+        <p>
+          As President and Lead Project Manager of Solar Chapter's Seattle branch,
+          I led a clean water infrastructure project that improved the community
+          water system for a village in East Nusa Tenggara.
+        </p>
+        <div class="stats">
+          <div class="stat">
+            <p class="stat-number">983</p>
+            <p class="stat-label">villagers with better access to clean water</p>
+          </div>
+          <div class="stat">
+            <p class="stat-number">$15K</p>
+            <p class="stat-label">project managed end to end</p>
+          </div>
+          <div class="stat">
+            <p class="stat-number">16</p>
+            <p class="stat-label">team members led across sourcing and procurement</p>
+          </div>
+          <div class="stat">
+            <p class="stat-number">130M</p>
+            <p class="stat-label">IDR (about $9,000) secured from three sponsors</p>
+          </div>
+        </div>
+        <a class="featured-link" href="https://www.solarchapter.com" target="_blank" rel="noopener">Learn about Solar Chapter →</a>
+      </article>
 
       <h3 class="subhead">Analysis &amp; research</h3>
       <div class="projects">
