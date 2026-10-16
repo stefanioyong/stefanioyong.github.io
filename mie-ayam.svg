@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" role="img" aria-labelledby="mie-title">
+  <title id="mie-title">Line drawing of a bowl of mie ayam, Jakarta chicken noodles, with chopsticks lifting noodles</title>
+  <style>
+    .ink    { fill: none; stroke: #1d2f4a; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .noodle { fill: none; stroke: #8c2a37; stroke-width: 1.4; stroke-linecap: round; }
+    .green  { fill: none; stroke: #4c7a62; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+    .steam  { fill: none; stroke: #2f5d8a; stroke-width: 1.2; stroke-linecap: round; opacity: .55; }
+    .tint   { fill: #f6e9eb; }
+    .dot    { fill: #1d2f4a; }
+  </style>
+
+  <!-- steam -->
+  <path class="steam" d="M48 50 c-6 -8 6 -12 0 -20 M64 46 c-6 -8 6 -12 0 -20"/>
+
+  <!-- bowl tint and body -->
+  <path class="tint" d="M18 80 H142 C140 110 112 126 80 126 C48 126 20 110 18 80 Z"/>
+  <path class="ink" d="M18 80 C20 110 48 126 80 126 C112 126 140 110 142 80"/>
+  <path class="ink" d="M62 126 L64 134 H96 L98 126"/>
+  <path class="noodle" d="M30 100 C60 108 100 108 130 100"/>
+  <ellipse class="ink" cx="80" cy="80" rx="62" ry="10"/>
+
+  <!-- noodles and toppings in the bowl -->
+  <path class="noodle" d="M30 80 c6 -5 10 5 16 0 s10 5 16 0 s10 5 16 0"/>
+  <!-- bok choy leaf -->
+  <path class="green" d="M110 79 C114 68 128 66 134 72 C128 78 118 82 110 79 Z M110 79 L130 71"/>
+  <!-- chicken pieces -->
+  <rect class="ink" x="38" y="72" width="9" height="6" rx="1.5"/>
+  <rect class="ink" x="52" y="69" width="8" height="6" rx="1.5"/>
+  <!-- spring onion -->
+  <circle class="dot" cx="66" cy="76" r="1.3"/>
+  <circle class="dot" cx="72" cy="73" r="1.3"/>
+  <circle class="dot" cx="79" cy="77" r="1.3"/>
+
+  <!-- chopsticks lifting noodles out of the bowl -->
+  <path class="ink" d="M152 6 L100 44 M156 14 L106 50"/>
+  <path class="noodle" d="M101 46 C95 54 105 60 98 68 C94 72 96 76 94 80 M105 49 C100 57 110 63 104 71 C101 75 103 78 102 82 M98 44 C91 51 99 58 92 65 C89 70 90 74 88 79"/>
+</svg>
