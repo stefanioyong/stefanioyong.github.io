@@ -13,15 +13,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Link to our stylesheet, which controls colours, fonts and layout -->
-  <!-- The ?v=3 makes browsers fetch the newest styles. Raise the number when you change style.css. -->
-  <link rel="stylesheet" href="style.css?v=3">
+  <!-- The ?v=4 makes browsers fetch the newest styles. Raise the number when you change style.css. -->
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
-  <!-- ===== NAVIGATION BAR ===== -->
+  <!-- ===== NAVIGATION BAR =====
+       Each link points to a "page" below by its id (e.g. #journey).
+       script.js shows only the page that was clicked. -->
   <header class="nav">
-    <a href="#top" class="nav-logo">S·A·O</a>
+    <a href="#home" class="nav-logo">S·A·O</a>
     <nav>
+      <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#journey">Journey</a>
       <a href="#skills">Skills</a>
@@ -29,25 +32,48 @@
     </nav>
   </header>
 
-  <main id="top">
+  <main>
 
-    <!-- ===== HERO: the first thing visitors see ===== -->
-    <section class="hero">
-      <p class="eyebrow">Analyst · Risk · Energy</p>
-      <h1>Stefani Adela Oyong</h1>
-      <p class="tagline">
-        An accountant turned analyst, building a career in risk and
-        quantitative analysis, with a heart for work that makes a
-        <em>real impact</em>.
-      </p>
-      <div class="buttons">
-        <a href="#contact" class="btn btn-primary">Get in touch</a>
-        <a href="https://www.linkedin.com/in/stefaniadelaoyong/" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
+    <!-- ================= PAGE: HOME ================= -->
+    <section id="home" class="page">
+
+      <div class="hero">
+        <p class="eyebrow">Analyst · Risk · Energy</p>
+        <h1>Stefani Adela Oyong</h1>
+        <p class="tagline">
+          An accountant turned analyst, building a career in risk and
+          quantitative analysis, with a heart for work that makes a
+          <em>real impact</em>.
+        </p>
+        <div class="buttons">
+          <a href="#journey" class="btn btn-primary">See my journey</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
       </div>
+
+      <!-- Focus areas: three cards, each with its own accent colour -->
+      <div class="section">
+        <h2>What I'm working toward</h2>
+        <div class="cards">
+          <article class="card card-red">
+            <h3>Risk management</h3>
+            <p>Identifying, measuring and managing financial and operational risk.</p>
+          </article>
+          <article class="card card-blue">
+            <h3>Quantitative analysis</h3>
+            <p>Using data and models to support clear, confident decisions.</p>
+          </article>
+          <article class="card card-green">
+            <h3>Energy &amp; impact</h3>
+            <p>Applying analysis where it helps people and the planet.</p>
+          </article>
+        </div>
+      </div>
+
     </section>
 
-    <!-- ===== ABOUT ME ===== -->
-    <section id="about" class="section">
+    <!-- ================= PAGE: ABOUT ================= -->
+    <section id="about" class="page section">
       <h2>About me</h2>
       <div class="about-text">
         <p>
@@ -72,10 +98,11 @@
       </div>
     </section>
 
-    <!-- ===== JOURNEY: three groups, newest first in each =====
+    <!-- ================= PAGE: JOURNEY =================
+         Three groups, newest first in each.
          To add an entry, copy one <div class="entry"> ... </div> block
          and change the text. -->
-    <section id="journey" class="section">
+    <section id="journey" class="page section">
       <h2>My journey</h2>
 
       <h3 class="group-title">Experience</h3>
@@ -147,37 +174,15 @@
           <p class="entry-note">Dean's List · Case Competition Runner-Up · Complete the Dream Scholarship</p>
         </div>
       </div>
-
     </section>
 
-    <!-- ===== FOCUS AREAS: three cards ===== -->
-    <section id="focus" class="section">
-      <h2>What I'm working toward</h2>
-      <div class="cards">
-        <article class="card">
-          <span class="card-icon">◆</span>
-          <h3>Risk management</h3>
-          <p>Identifying, measuring and managing financial and operational risk.</p>
-        </article>
-        <article class="card">
-          <span class="card-icon">◇</span>
-          <h3>Quantitative analysis</h3>
-          <p>Using data and models to support clear, confident decisions.</p>
-        </article>
-        <article class="card">
-          <span class="card-icon">✦</span>
-          <h3>Energy &amp; impact</h3>
-          <p>Applying analysis where it helps people and the planet.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- ===== SKILLS: small "pills" in three groups ===== -->
-    <section id="skills" class="section">
+    <!-- ================= PAGE: SKILLS =================
+         Three groups of "pills"; each group has its own colour. -->
+    <section id="skills" class="page section">
       <h2>What I bring</h2>
 
       <h3 class="pill-label">Finance &amp; risk</h3>
-      <ul class="pills">
+      <ul class="pills pills-blue">
         <li>Financial statement analysis</li>
         <li>Budgeting &amp; forecasting</li>
         <li>Variance analysis</li>
@@ -189,7 +194,7 @@
       </ul>
 
       <h3 class="pill-label">Tools</h3>
-      <ul class="pills">
+      <ul class="pills pills-green">
         <li>Excel</li>
         <li>Crystal Ball</li>
         <li>Python</li>
@@ -199,7 +204,7 @@
       </ul>
 
       <h3 class="pill-label">Strengths</h3>
-      <ul class="pills">
+      <ul class="pills pills-red">
         <li>Accounting foundation</li>
         <li>Attention to detail</li>
         <li>Quick to adapt</li>
@@ -211,15 +216,16 @@
       </ul>
     </section>
 
-    <!-- ===== CONTACT ===== -->
-    <section id="contact" class="section contact">
+    <!-- ================= PAGE: CONTACT ================= -->
+    <section id="contact" class="page section contact">
       <h2>Let's connect</h2>
       <p>I'd love to hear about opportunities, projects or just to chat.</p>
       <div class="contact-links">
-        <a href="mailto:stefanioyong@gmail.com">stefanioyong@gmail.com</a>
-        <a href="https://www.linkedin.com/in/stefaniadelaoyong/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/Stefanioyong" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:stefanioyong@gmail.com" class="btn btn-primary">Email me</a>
+        <a href="https://www.linkedin.com/in/stefaniadelaoyong/" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Stefanioyong" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
       </div>
+      <p class="contact-email">stefanioyong@gmail.com</p>
     </section>
 
   </main>
@@ -229,5 +235,7 @@
     <p>© 2026 Stefani Adela Oyong</p>
   </footer>
 
+  <!-- The small script that switches between pages -->
+  <script src="script.js?v=1"></script>
 </body>
 </html>
