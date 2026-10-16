@@ -238,6 +238,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; col
 /* Jakarta–Seattle line drawing above the About text */
 .skyline { margin: -4px auto 28px; max-width: 720px; }
 .skyline img { display: block; width: 100%; height: auto; }
+.skyline.home-art { margin: 0 auto 48px; }   /* Home drawing sits above "At a glance" */
 
 /* Beyond work: four small tiles */
 .hobbies {

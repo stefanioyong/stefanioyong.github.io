@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 170" role="img" aria-labelledby="ae-title">
+  <title id="ae-title">Line drawing of a rising chart with a shaded risk band, linked by a dotted line to wind turbines and a solar panel</title>
+  <style>
+    .ink   { fill: none; stroke: #1d2f4a; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .thin  { fill: none; stroke: #1d2f4a; stroke-width: 1; stroke-linecap: round; opacity: .25; }
+    .band  { fill: #e8eff7; }
+    .bandE { fill: none; stroke: #2f5d8a; stroke-width: 1; stroke-dasharray: 3 4; opacity: .7; }
+    .pt    { fill: #ffffff; stroke: #1d2f4a; stroke-width: 1.4; }
+    .ptR   { fill: #8c2a37; }
+    .path  { fill: none; stroke: #8c2a37; stroke-width: 1.2; stroke-dasharray: 2 6; stroke-linecap: round; opacity: .8; }
+    .blade { fill: #ffffff; stroke: #1d2f4a; stroke-width: 1.4; stroke-linejoin: round; }
+    .panel { fill: #e8eff7; stroke: #1d2f4a; stroke-width: 1.6; stroke-linejoin: round; }
+    .sun   { fill: #f6e9eb; }
+    .green { fill: none; stroke: #4c7a62; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+
+  <defs>
+    <!-- one wind turbine, hub at (0,0), base 92 below -->
+    <g id="turbine">
+      <path class="ink" d="M-1.5 4 L-3 92 M1.5 4 L3 92"/>
+      <path class="blade" d="M0 0 L-3 -28 L0 -44 L3 -28 Z"/>
+      <path class="blade" d="M0 0 L22.7 16.6 L38 22 L25.7 11.4 Z"/>
+      <path class="blade" d="M0 0 L-25.7 11.4 L-38 22 L-22.7 16.6 Z"/>
+      <circle class="pt" cx="0" cy="0" r="3.2"/>
+    </g>
+  </defs>
+
+  <!-- ===== Chart with a risk band ===== -->
+  <path class="thin" d="M40 60 H300 M40 90 H300 M40 120 H300"/>
+  <path class="band" d="M50 120 L85 106 L120 110 L155 86 L190 78 L225 56 L260 46 L292 28 L292 72 L260 86 L225 92 L190 110 L155 114 L120 134 L85 126 L50 136 Z"/>
+  <path class="bandE" d="M50 120 L85 106 L120 110 L155 86 L190 78 L225 56 L260 46 L292 28 M50 136 L85 126 L120 134 L155 114 L190 110 L225 92 L260 86 L292 72"/>
+  <path class="ink" d="M40 28 V150"/>
+  <path class="ink" d="M50 128 L85 116 L120 122 L155 100 L190 94 L225 74 L260 66 L292 50"/>
+  <circle class="pt" cx="50" cy="128" r="3"/>
+  <circle class="pt" cx="85" cy="116" r="3"/>
+  <circle class="pt" cx="120" cy="122" r="3"/>
+  <circle class="pt" cx="155" cy="100" r="3"/>
+  <circle class="pt" cx="190" cy="94" r="3"/>
+  <circle class="pt" cx="225" cy="74" r="3"/>
+  <circle class="pt" cx="260" cy="66" r="3"/>
+  <circle class="ptR" cx="292" cy="50" r="4"/>
+
+  <!-- ===== Dotted link from insight to energy ===== -->
+  <path class="path" d="M300 46 C350 18 410 20 458 50"/>
+
+  <!-- ===== Energy: turbines, solar panel, sun ===== -->
+  <circle class="sun" cx="742" cy="46" r="24"/>
+  <use href="#turbine" x="470" y="58"/>
+  <g transform="translate(552 84) scale(0.72)"><use href="#turbine"/></g>
+
+  <path class="panel" d="M612 118 L640 84 H724 L696 118 Z"/>
+  <path class="ink" d="M661 84 L633 118 M682 84 L654 118 M703 84 L675 118 M626 101 H710"/>
+  <path class="ink" d="M668 118 V150 M654 150 H682"/>
+
+  <!-- grass -->
+  <path class="green" d="M590 150 l3 -9 l3 9 M600 150 l2 -6 l2 6 M736 150 l3 -10 l3 10 M746 150 l2 -6 l2 6"/>
+  <path class="green" d="M420 150 C424 140 432 136 440 138 C436 146 428 150 420 150 Z"/>
+
+  <!-- ground line -->
+  <path class="ink" d="M20 150 H780"/>
+</svg>
