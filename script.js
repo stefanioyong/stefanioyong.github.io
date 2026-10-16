@@ -29,6 +29,33 @@ function showPage() {
 window.addEventListener("hashchange", showPage);
 showPage();
 
+// ----- Journey filters -----
+// Clicking a filter button shows only entries with that class
+// (tl-work, tl-lead or tl-edu), or all of them.
+const filterButtons = document.querySelectorAll(".filter");
+const entries = document.querySelectorAll(".tl-item");
+
+function applyFilter(filter) {
+  let shown = 0;
+  entries.forEach(function (entry) {
+    const visible = filter === "all" || entry.classList.contains(filter);
+    entry.hidden = !visible;
+    // Alternate visible entries left and right for the zig-zag
+    entry.classList.toggle("right", visible && shown % 2 === 1);
+    if (visible) shown++;
+  });
+  filterButtons.forEach(function (button) {
+    button.classList.toggle("active", button.dataset.filter === filter);
+  });
+}
+
+filterButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    applyFilter(button.dataset.filter);
+  });
+});
+applyFilter("all");
+
 // When the site opens with a #tab in the address, the browser jumps down
 // to that section after loading; this brings it back to the top.
 window.addEventListener("load", function () {
