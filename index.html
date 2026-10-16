@@ -13,8 +13,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Link to our stylesheet, which controls colours, fonts and layout -->
-  <!-- The ?v=10 makes browsers fetch the newest styles. Raise the number when you change style.css. -->
-  <link rel="stylesheet" href="style.css?v=10">
+  <!-- The ?v=12 makes browsers fetch the newest styles. Raise the number when you change style.css. -->
+  <link rel="stylesheet" href="style.css?v=12">
 </head>
 <body>
 
@@ -27,13 +27,6 @@
       quantitative analysis, with a heart for work that makes a
       <em>real impact</em>.
     </p>
-    <div class="links">
-      <a href="https://www.linkedin.com/in/stefaniadelaoyong/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/Stefanioyong" target="_blank" rel="noopener">GitHub</a>
-      <!-- To update the résumé, replace Stefani-Oyong-Resume.pdf in this folder with the new PDF (same name) -->
-      <a href="Stefani-Oyong-Resume.pdf" target="_blank" rel="noopener">Résumé</a>
-      <a href="mailto:stefanioyong@gmail.com" class="link-primary">Email me</a>
-    </div>
   </header>
 
   <!-- ===== TABS =====
@@ -44,7 +37,6 @@
     <a href="#about">About</a>
     <a href="#journey">Journey</a>
     <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -91,6 +83,55 @@
         </article>
       </div>
 
+
+      <!-- Skills: small "pills" in groups; each group has its own colour -->
+      <h2 class="spaced">What I bring</h2>
+
+      <h3 class="pill-label">Finance &amp; risk</h3>
+      <ul class="pills pills-blue">
+        <li>Financial statement analysis</li>
+        <li>Budgeting &amp; forecasting</li>
+        <li>Variance analysis</li>
+        <li>Month-end close</li>
+        <li>Revenue recognition</li>
+        <li>Cash flow management</li>
+        <li>Risk analysis</li>
+        <li>Monte Carlo simulation</li>
+      </ul>
+
+      <h3 class="pill-label">Tools</h3>
+      <ul class="pills pills-green">
+        <li>Excel</li>
+        <li>Crystal Ball</li>
+        <li>Python</li>
+        <li>SQL</li>
+        <li>Power BI</li>
+        <li>Dynamics 365</li>
+        <li>GoSystem Tax RS</li>
+        <li>K-1 Global</li>
+        <li>Sage Fixed Assets</li>
+        <li>Photoshop</li>
+      </ul>
+
+      <h3 class="pill-label">Strengths</h3>
+      <ul class="pills pills-red">
+        <li>Accounting foundation</li>
+        <li>Attention to detail</li>
+        <li>Quick to adapt</li>
+        <li>Resilient</li>
+        <li>Hard-working</li>
+        <li>Cross-cultural perspective</li>
+        <li>Impact-driven</li>
+      </ul>
+
+      <h3 class="pill-label">Languages</h3>
+      <ul class="pills pills-navy">
+        <li>English (fluent)</li>
+        <li>Indonesian (native)</li>
+        <li>Mandarin (conversational)</li>
+        <li>German (conversational)</li>
+      </ul>
+
     </section>
 
     <!-- ================= PAGE: ABOUT =================
@@ -132,14 +173,17 @@
       <h3 class="subhead">Beyond work</h3>
       <div class="hobbies">
         <div class="hobby">
+          <img class="hobby-art" src="dancing.svg" alt="Line drawing of a dancer mid-spin with music notes">
           <h4>Dancing</h4>
           <p>My favourite way to express myself. Videos coming soon.</p>
         </div>
         <div class="hobby">
+          <img class="hobby-art" src="golfing.svg" alt="Line drawing of a golf green with a flag and a ball on a tee">
           <h4>Golfing</h4>
           <p>Patience, focus and a good excuse to be outside.</p>
         </div>
         <div class="hobby">
+          <img class="hobby-art" src="exploring.svg" alt="Line drawing of a folded map with a dotted route to a pin">
           <h4>Exploring</h4>
           <p>Always trying new places and new things to do around Seattle.</p>
         </div>
@@ -375,57 +419,6 @@
       </div>
     </section>
 
-    <!-- ================= PAGE: SKILLS =================
-         Three groups of "pills"; each group has its own colour. -->
-    <section id="skills" class="page section">
-      <h2>What I bring</h2>
-
-      <h3 class="pill-label">Finance &amp; risk</h3>
-      <ul class="pills pills-blue">
-        <li>Financial statement analysis</li>
-        <li>Budgeting &amp; forecasting</li>
-        <li>Variance analysis</li>
-        <li>Month-end close</li>
-        <li>Revenue recognition</li>
-        <li>Cash flow management</li>
-        <li>Risk analysis</li>
-        <li>Monte Carlo simulation</li>
-      </ul>
-
-      <h3 class="pill-label">Tools</h3>
-      <ul class="pills pills-green">
-        <li>Excel</li>
-        <li>Crystal Ball</li>
-        <li>Python</li>
-        <li>SQL</li>
-        <li>Power BI</li>
-        <li>Dynamics 365</li>
-        <li>GoSystem Tax RS</li>
-        <li>K-1 Global</li>
-        <li>Sage Fixed Assets</li>
-        <li>Photoshop</li>
-      </ul>
-
-      <h3 class="pill-label">Strengths</h3>
-      <ul class="pills pills-red">
-        <li>Accounting foundation</li>
-        <li>Attention to detail</li>
-        <li>Quick to adapt</li>
-        <li>Resilient</li>
-        <li>Hard-working</li>
-        <li>Cross-cultural perspective</li>
-        <li>Impact-driven</li>
-      </ul>
-
-      <h3 class="pill-label">Languages</h3>
-      <ul class="pills pills-navy">
-        <li>English (fluent)</li>
-        <li>Indonesian (native)</li>
-        <li>Mandarin (conversational)</li>
-        <li>German (conversational)</li>
-      </ul>
-    </section>
-
     <!-- ================= PAGE: CONTACT ================= -->
     <section id="contact" class="page section contact">
       <h2>Let's connect</h2>
@@ -433,7 +426,9 @@
       <div class="contact-links">
         <a href="mailto:stefanioyong@gmail.com" class="btn btn-primary">Email me</a>
         <a href="https://www.linkedin.com/in/stefaniadelaoyong/" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
+        <!-- To update the résumé, replace Stefani-Oyong-Resume.pdf in this folder with the new PDF (same name) -->
         <a href="Stefani-Oyong-Resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Résumé (PDF)</a>
+        <a href="https://github.com/Stefanioyong" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
       </div>
       <p class="contact-email">stefanioyong@gmail.com</p>
     </section>

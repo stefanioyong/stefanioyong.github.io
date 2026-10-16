@@ -85,28 +85,13 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; col
   font-size: 1.08rem;
   color: var(--slate);
   max-width: 580px;
-  margin: 0 auto 28px;
+  margin: 0 auto 8px;
 }
 .tagline em {
   font-family: var(--serif);
   font-size: 1.3em;
   color: var(--red);
 }
-
-/* Small outlined link buttons under the name */
-.links { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-.links a {
-  padding: 7px 20px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--white);
-  color: var(--navy);
-  font-size: 0.88rem;
-  transition: border-color 0.2s ease, color 0.2s ease;
-}
-.links a:hover { border-color: var(--navy); }
-.links a.link-primary { background: var(--red); border-color: var(--red); color: var(--white); }
-.links a.link-primary:hover { background: var(--red-dark); border-color: var(--red-dark); }
 
 /* =========================================================
    TABS (stick to the top while scrolling)
@@ -266,11 +251,8 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; col
   border-radius: 12px;
   padding: 20px 18px;
   text-align: center;
-  display: flex;                 /* centres the text when a tile is taller */
-  flex-direction: column;
-  justify-content: center;
 }
-.hobby-art { width: 84px; height: auto; margin: -6px auto 6px; }   /* mie ayam drawing */
+.hobby-art { display: block; width: 96px; height: auto; margin: -4px auto 8px; }   /* hobby drawings */
 .hobby h4 {
   font-family: var(--serif);
   font-size: 1.3rem;
