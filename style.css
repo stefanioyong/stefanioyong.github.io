@@ -416,16 +416,15 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; col
 .tl-org a:hover { color: var(--dot); }
 .tl-org a:hover .school-mark { background: var(--dot); color: var(--white); }
 
-/* Solar Chapter logo in a small framed chip, same height as the badges */
+/* Solar Chapter logo, no frame */
 .org-logo {
-  height: 32px;
+  height: 30px;
   width: auto;
-  padding: 3px 7px;
   margin-right: 10px;
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: 8px;
 }
+
+/* Location after the name, e.g. "· Seattle, WA" */
+.tl-place::before { content: "·"; margin: 0 6px; }
 
 /* Round initial badge, tinted to match the entry (blue, red or green) */
 .school-mark {
@@ -530,4 +529,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; col
   .tabs a { font-size: 1rem; padding-bottom: 8px; }
   .section { padding: 44px 16px 60px; }
   .about-text { padding: 28px 22px; }
+  /* on phones the location drops neatly under the name, without the dot */
+  .tl-place { flex-basis: 100%; padding-left: 42px; }
+  .tl-place::before { content: none; }
 }
