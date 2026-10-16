@@ -3,7 +3,8 @@
 // stefanioyong.github.io/#journey shows the section with id="journey".
 
 const pages = document.querySelectorAll(".page");
-const navLinks = document.querySelectorAll(".nav nav a");
+const tabLinks = document.querySelectorAll(".tabs a");
+const tabs = document.querySelector(".tabs");
 
 function showPage() {
   // Take the part after "#", or use "home" if there isn't one
@@ -15,14 +16,21 @@ function showPage() {
     page.hidden = page.id !== id;
   });
 
-  // Underline the matching menu link
-  navLinks.forEach(function (link) {
+  // Underline the matching tab
+  tabLinks.forEach(function (link) {
     link.classList.toggle("active", link.getAttribute("href") === "#" + id);
   });
 
-  window.scrollTo(0, 0);
+  // If you've scrolled down past the tabs, go back up to just below them
+  window.scrollTo(0, Math.min(window.scrollY, tabs.offsetTop));
 }
 
 // Run when a link changes the address, and once when the site first opens
 window.addEventListener("hashchange", showPage);
 showPage();
+
+// When the site opens with a #tab in the address, the browser jumps down
+// to that section after loading; this brings it back to the top.
+window.addEventListener("load", function () {
+  setTimeout(function () { window.scrollTo(0, 0); }, 0);
+});
