@@ -357,9 +357,9 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; col
   border-radius: 50%;
   margin-right: 8px;
 }
-.dot-work, .tl-work { --dot: var(--blue); }
-.dot-lead, .tl-lead { --dot: var(--red); }
-.dot-edu,  .tl-edu  { --dot: var(--green); }
+.dot-work, .tl-work { --dot: var(--blue);  --dot-soft: var(--blue-soft); }
+.dot-lead, .tl-lead { --dot: var(--red);   --dot-soft: var(--red-soft); }
+.dot-edu,  .tl-edu  { --dot: var(--green); --dot-soft: var(--green-soft); }
 .dot { background: var(--dot); }
 
 .timeline { position: relative; }
@@ -402,31 +402,48 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; col
   font-weight: 500;
 }
 .tl-item h3 { font-size: 1.4rem; margin: 4px 0 2px; }
-.tl-org { color: var(--slate); font-size: 0.92rem; }
-/* Organisation links in the timeline: Solar Chapter logo and school badges */
-.tl-org a { color: inherit; }
-.tl-org a:hover { color: var(--red); }
-.org-logo {
-  height: 28px;
-  width: auto;
-  vertical-align: -9px;
-  margin-right: 8px;
+/* Organisation line: badge or logo, then the linked name */
+.tl-org {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 0;
+  color: var(--slate);
+  font-size: 0.92rem;
+  margin-top: 4px;
 }
-.school-mark {                 /* small round text badge, e.g. "UW" */
+.tl-org a { color: inherit; display: inline-flex; align-items: center; }
+.tl-org a:hover { color: var(--dot); }
+.tl-org a:hover .school-mark { background: var(--dot); color: var(--white); }
+
+/* Solar Chapter logo in a small framed chip, same height as the badges */
+.org-logo {
+  height: 32px;
+  width: auto;
+  padding: 3px 7px;
+  margin-right: 10px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+/* Round initial badge, tinted to match the entry (blue, red or green) */
+.school-mark {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
-  margin-right: 8px;
-  border: 1px solid var(--navy);
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
   border-radius: 50%;
+  background: var(--dot-soft);
+  color: var(--dot);
   font-family: var(--serif);
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--navy);
-  vertical-align: 1px;
+  letter-spacing: 0.03em;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 .tl-note { font-size: 0.88rem; color: var(--slate); font-style: italic; margin-top: 8px; }
 .tl-item ul { list-style: none; font-size: 0.92rem; margin-top: 12px; }
