@@ -1,4 +1,4 @@
-/* =========================================================
+﻿/* =========================================================
    COLOURS & FONTS
    These are "variables": change a colour here once and it
    updates everywhere on the site.
@@ -181,64 +181,48 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
   color: var(--muted);
 }
 
-/* Journey timeline: a thin line down the left with a dot per entry */
-.timeline {
-  list-style: none;
-  position: relative;
-  padding-left: 32px;
-}
-.timeline::before {            /* the vertical line */
-  content: "";
-  position: absolute;
-  left: 7px;
-  top: 6px;
-  bottom: 6px;
-  width: 1px;
-  background: var(--line);
-}
-.tl-item {
-  position: relative;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 24px 26px;
-  margin-bottom: 22px;
-}
-.tl-item::before {             /* the dot */
-  content: "";
-  position: absolute;
-  left: -31px;
-  top: 30px;
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background: var(--cream);
-  border: 2px solid var(--rose);
-}
-.tl-date {
+/* Journey: dates on the left, details on the right, thin lines between */
+.group-title {
   font-size: 0.8rem;
-  letter-spacing: 0.12em;
+  font-family: var(--sans);
+  font-weight: 500;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--rose);
-  display: inline-block;
-  margin-right: 10px;
+  margin: 48px 0 8px;
 }
-.tl-item h3 { font-size: 1.5rem; margin: 6px 0 2px; }
-.tl-org { color: var(--muted); font-size: 0.95rem; margin-bottom: 10px; }
-.tl-item ul { padding-left: 18px; font-size: 0.95rem; }
-.tl-item ul li { margin-bottom: 4px; }
-.tl-item > p:last-child { font-size: 0.95rem; }
-
-/* Small coloured labels */
-.tag {
-  font-size: 0.72rem;
-  padding: 3px 10px;
-  border-radius: 999px;
-  vertical-align: 2px;
+.group-title:first-of-type { margin-top: 8px; }
+.entry {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 24px;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
 }
-.tag-work   { background: var(--blush); color: var(--rose-dark); }
-.tag-edu    { background: #e6ebe3; color: #5c6f55; }   /* soft sage */
-.tag-impact { background: #efe6d4; color: #8a6d3b; }   /* soft gold */
+.entry-date {
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding-top: 4px;
+}
+.entry h4 {
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.entry-org { color: var(--muted); font-size: 0.95rem; margin: 2px 0 10px; }
+.entry-note { font-size: 0.9rem; color: var(--muted); font-style: italic; }
+.entry ul { list-style: none; font-size: 0.95rem; }
+.entry ul li { position: relative; padding-left: 18px; margin-bottom: 6px; }
+.entry ul li::before {          /* a small rose dash instead of a bullet */
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.8em;
+  width: 8px;
+  height: 1px;
+  background: var(--rose);
+}
 
 /* Contact */
 .contact { text-align: center; }
@@ -268,4 +252,5 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; }
   .nav nav a { margin-left: 16px; }
   .hero { padding: 80px 16px 70px; }
   .section { padding: 50px 16px; }
+  .entry { grid-template-columns: 1fr; gap: 4px; }
 }
