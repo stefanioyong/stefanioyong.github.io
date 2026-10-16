@@ -13,166 +13,179 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Link to our stylesheet, which controls colours, fonts and layout -->
-  <!-- The ?v=4 makes browsers fetch the newest styles. Raise the number when you change style.css. -->
-  <link rel="stylesheet" href="style.css?v=4">
+  <!-- The ?v=5 makes browsers fetch the newest styles. Raise the number when you change style.css. -->
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
-  <!-- ===== NAVIGATION BAR =====
+  <!-- ===== MASTHEAD: shown above every tab ===== -->
+  <header class="masthead">
+    <p class="eyebrow">Analyst · Risk · Energy</p>
+    <h1>Stefani Adela Oyong</h1>
+    <p class="tagline">
+      An accountant turned analyst, building a career in risk and
+      quantitative analysis, with a heart for work that makes a
+      <em>real impact</em>.
+    </p>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/stefaniadelaoyong/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Stefanioyong" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:stefanioyong@gmail.com" class="link-primary">Email me</a>
+    </div>
+  </header>
+
+  <!-- ===== TABS =====
        Each link points to a "page" below by its id (e.g. #journey).
        script.js shows only the page that was clicked. -->
-  <header class="nav">
-    <a href="#home" class="nav-logo">S·A·O</a>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#journey">Journey</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <nav class="tabs">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#journey">Journey</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <main>
 
     <!-- ================= PAGE: HOME ================= -->
-    <section id="home" class="page">
+    <section id="home" class="page section">
 
-      <div class="hero">
-        <p class="eyebrow">Analyst · Risk · Energy</p>
-        <h1>Stefani Adela Oyong</h1>
-        <p class="tagline">
-          An accountant turned analyst, building a career in risk and
-          quantitative analysis, with a heart for work that makes a
-          <em>real impact</em>.
-        </p>
-        <div class="buttons">
-          <a href="#journey" class="btn btn-primary">See my journey</a>
-          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      <!-- At a glance: four numbers from my experience -->
+      <h2>At a glance</h2>
+      <div class="stats">
+        <div class="stat">
+          <p class="stat-number">$30K+</p>
+          <p class="stat-label">in claims resolved within three months</p>
+        </div>
+        <div class="stat">
+          <p class="stat-number">983</p>
+          <p class="stat-label">villagers reached by a clean water project I led</p>
+        </div>
+        <div class="stat">
+          <p class="stat-number">16</p>
+          <p class="stat-label">team members led across sourcing and procurement</p>
+        </div>
+        <div class="stat">
+          <p class="stat-number">2</p>
+          <p class="stat-label">University of Washington degrees, B.A. and M.S.</p>
         </div>
       </div>
 
       <!-- Focus areas: three cards, each with its own accent colour -->
-      <div class="section">
-        <h2>What I'm working toward</h2>
-        <div class="cards">
-          <article class="card card-red">
-            <h3>Risk management</h3>
-            <p>Identifying, measuring and managing financial and operational risk.</p>
-          </article>
-          <article class="card card-blue">
-            <h3>Quantitative analysis</h3>
-            <p>Using data and models to support clear, confident decisions.</p>
-          </article>
-          <article class="card card-green">
-            <h3>Energy &amp; impact</h3>
-            <p>Applying analysis where it helps people and the planet.</p>
-          </article>
-        </div>
+      <h2 class="spaced">What I'm working toward</h2>
+      <div class="cards">
+        <article class="card card-red">
+          <h3>Risk management</h3>
+          <p>Identifying, measuring and managing financial and operational risk.</p>
+        </article>
+        <article class="card card-blue">
+          <h3>Quantitative analysis</h3>
+          <p>Using data and models to support clear, confident decisions.</p>
+        </article>
+        <article class="card card-green">
+          <h3>Energy &amp; impact</h3>
+          <p>Applying analysis where it helps people and the planet.</p>
+        </article>
       </div>
 
     </section>
 
-    <!-- ================= PAGE: ABOUT ================= -->
+    <!-- ================= PAGE: ABOUT =================
+         <mark> highlights a phrase in the accent colour. -->
     <section id="about" class="page section">
       <h2>About me</h2>
       <div class="about-text">
+        <p class="lead">Every number tells a story. I want mine to be one of impact.</p>
         <p>
           I started my career in accounting, where I learned to read the story
-          behind the numbers, and to care about getting them right. Now I'm
-          pursuing a <strong>Master of Science in Computational Finance and
-          Risk Management</strong> at the University of Washington, bringing
+          behind the numbers and to <mark>care about getting them right</mark>.
+          Now I'm pursuing a <strong>Master of Science in Computational Finance
+          and Risk Management</strong> at the University of Washington, bringing
           that foundation into analyst, risk management and quantitative roles.
         </p>
         <p>
           Growing up in Indonesia and building a life and career abroad taught
-          me to adapt quickly, work hard and stay resilient when things get
-          difficult. I want my work to matter: to know that at the end of
-          the day, I've helped build something meaningful.
+          me to <mark>adapt quickly, work hard and stay resilient</mark> when
+          things get difficult. Leading a clean water project back home showed
+          me how much careful planning and honest numbers can change people's lives.
         </p>
         <p>
           That's what draws me to the <strong>energy sector</strong> and to
           <strong>non-profit work</strong>: industries where careful analysis
-          can shape a better future. I'm also open to other opportunities
-          where I can grow and contribute.
+          can shape a better future. I want to know that at the end of the day,
+          <mark>I've helped build something meaningful</mark>. I'm also open to
+          other opportunities where I can grow and contribute.
         </p>
       </div>
     </section>
 
     <!-- ================= PAGE: JOURNEY =================
-         Three groups, newest first in each.
-         To add an entry, copy one <div class="entry"> ... </div> block
-         and change the text. -->
-    <section id="journey" class="page section">
+         A zig-zag timeline, newest first.
+         To add an entry, copy one <div class="tl-item ..."> ... </div> block.
+         The second class sets the dot colour:
+           tl-work = Experience (blue), tl-lead = Leadership (red), tl-edu = Education (green) -->
+    <section id="journey" class="page section section-wide">
       <h2>My journey</h2>
+      <ul class="legend">
+        <li><span class="dot dot-work"></span>Experience</li>
+        <li><span class="dot dot-lead"></span>Leadership &amp; impact</li>
+        <li><span class="dot dot-edu"></span>Education</li>
+      </ul>
 
-      <h3 class="group-title">Experience</h3>
+      <div class="timeline">
 
-      <div class="entry">
-        <p class="entry-date">Nov 2024 — Sep 2026</p>
-        <div class="entry-body">
-          <h4>Accounts Receivable Specialist / Staff Accountant</h4>
-          <p class="entry-org">NAES Corporation · Issaquah, WA</p>
+        <div class="tl-item tl-edu">
+          <p class="tl-date">Expected Dec 2027</p>
+          <h3>M.S. Computational Finance &amp; Risk Management</h3>
+          <p class="tl-org">University of Washington</p>
+        </div>
+
+        <div class="tl-item tl-work">
+          <p class="tl-date">Nov 2024 — Sep 2026</p>
+          <h3>Accounts Receivable Specialist / Staff Accountant</h3>
+          <p class="tl-org">NAES Corporation · Issaquah, WA</p>
           <ul>
             <li>Prepared and submitted 30+ payroll and project management invoices weekly in Microsoft Dynamics 365.</li>
             <li>Ran monthly accounts receivable closings that supported operational reporting.</li>
             <li>Created 300+ backup invoices in one week to support audit and billing requirements.</li>
           </ul>
         </div>
-      </div>
 
-      <div class="entry">
-        <p class="entry-date">Dec 2023 — Sep 2024</p>
-        <div class="entry-body">
-          <h4>Accountant</h4>
-          <p class="entry-org">Foss Home and Village · Seattle, WA</p>
-          <ul>
-            <li>Resolved more than $30,000 in claims within three months, improving reimbursement collection.</li>
-            <li>Reconciled accounts receivable, trust fund, pension plan and bank accounts monthly.</li>
-            <li>Filed business license, property tax exemption and excise tax reports for regulatory compliance.</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3 class="group-title">Leadership &amp; impact</h3>
-
-      <div class="entry">
-        <p class="entry-date">Oct 2021 — Oct 2025</p>
-        <div class="entry-body">
-          <h4>President &amp; Lead Project Manager</h4>
-          <p class="entry-org">Solar Chapter</p>
+        <div class="tl-item tl-lead">
+          <p class="tl-date">Oct 2021 — Oct 2025</p>
+          <h3>President &amp; Lead Project Manager</h3>
+          <p class="tl-org">Solar Chapter</p>
           <ul>
             <li>Managed a $15,000 clean water project benefiting 983 villagers in Golo Ketak, Indonesia.</li>
             <li>Led a team of 16 to source suppliers, evaluate costs and negotiate procurement.</li>
             <li>Secured 130 million IDR (about $9,000 USD) from three sponsors.</li>
           </ul>
         </div>
-      </div>
 
-      <div class="entry">
-        <p class="entry-date">Jan — May 2021</p>
-        <div class="entry-body">
-          <h4>Volunteer Tax Preparer</h4>
-          <p class="entry-org">United Way of King County</p>
+        <div class="tl-item tl-work">
+          <p class="tl-date">Dec 2023 — Sep 2024</p>
+          <h3>Accountant</h3>
+          <p class="tl-org">Foss Home and Village · Seattle, WA</p>
+          <ul>
+            <li>Resolved more than $30,000 in claims within three months, improving reimbursement collection.</li>
+            <li>Reconciled accounts receivable, trust fund, pension plan and bank accounts monthly.</li>
+            <li>Filed business license, property tax exemption and excise tax reports for regulatory compliance.</li>
+          </ul>
         </div>
-      </div>
 
-      <h3 class="group-title">Education</h3>
-
-      <div class="entry">
-        <p class="entry-date">Expected Dec 2027</p>
-        <div class="entry-body">
-          <h4>M.S. Computational Finance &amp; Risk Management</h4>
-          <p class="entry-org">University of Washington</p>
+        <div class="tl-item tl-edu">
+          <p class="tl-date">Aug 2023</p>
+          <h3>B.A. Operations &amp; Supply Chain Management and Information Systems</h3>
+          <p class="tl-org">University of Washington, Foster School of Business</p>
+          <p class="tl-note">Dean's List · Case Competition Runner-Up · Complete the Dream Scholarship</p>
         </div>
-      </div>
 
-      <div class="entry">
-        <p class="entry-date">Aug 2023</p>
-        <div class="entry-body">
-          <h4>B.A. Operations &amp; Supply Chain Management and Information Systems</h4>
-          <p class="entry-org">University of Washington, Foster School of Business</p>
-          <p class="entry-note">Dean's List · Case Competition Runner-Up · Complete the Dream Scholarship</p>
+        <div class="tl-item tl-lead">
+          <p class="tl-date">Jan — May 2021</p>
+          <h3>Volunteer Tax Preparer</h3>
+          <p class="tl-org">United Way of King County</p>
         </div>
+
       </div>
     </section>
 
@@ -223,7 +236,6 @@
       <div class="contact-links">
         <a href="mailto:stefanioyong@gmail.com" class="btn btn-primary">Email me</a>
         <a href="https://www.linkedin.com/in/stefaniadelaoyong/" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/Stefanioyong" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
       </div>
       <p class="contact-email">stefanioyong@gmail.com</p>
     </section>
@@ -232,10 +244,10 @@
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <p>© 2026 Stefani Adela Oyong</p>
+    <p>Built with care in Seattle · © 2026 Stefani Adela Oyong</p>
   </footer>
 
   <!-- The small script that switches between pages -->
-  <script src="script.js?v=1"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
