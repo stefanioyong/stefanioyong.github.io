@@ -13,7 +13,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Link to our stylesheet, which controls colours, fonts and layout -->
-  <link rel="stylesheet" href="style.css">
+  <!-- The ?v=3 makes browsers fetch the newest styles. Raise the number when you change style.css. -->
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
@@ -71,74 +72,82 @@
       </div>
     </section>
 
-    <!-- ===== JOURNEY: a timeline, newest first =====
-         To add a new entry, copy one <li class="tl-item"> ... </li> block
-         and change the text. The tag (Work / Education / Impact) sets its colour. -->
+    <!-- ===== JOURNEY: three groups, newest first in each =====
+         To add an entry, copy one <div class="entry"> ... </div> block
+         and change the text. -->
     <section id="journey" class="section">
       <h2>My journey</h2>
-      <ol class="timeline">
 
-        <li class="tl-item">
-          <p class="tl-date">Expected Dec 2027</p>
-          <span class="tag tag-edu">Education</span>
-          <h3>M.S. Computational Finance &amp; Risk Management</h3>
-          <p class="tl-org">University of Washington · Seattle, WA</p>
-          <p>Building quantitative, modelling and risk management skills for analyst and quant roles.</p>
-        </li>
+      <h3 class="group-title">Experience</h3>
 
-        <li class="tl-item">
-          <p class="tl-date">Nov 2024 – Present</p>
-          <span class="tag tag-work">Work</span>
-          <h3>Accounts Receivable Specialist</h3>
-          <p class="tl-org">NAES Corporation · Issaquah, WA</p>
+      <div class="entry">
+        <p class="entry-date">Nov 2024 — Sep 2026</p>
+        <div class="entry-body">
+          <h4>Accounts Receivable Specialist / Staff Accountant</h4>
+          <p class="entry-org">NAES Corporation · Issaquah, WA</p>
           <ul>
-            <li>Prepare and submit 30+ payroll and project management invoices weekly in Microsoft Dynamics 365.</li>
-            <li>Run monthly accounts receivable closings that support operational reporting.</li>
+            <li>Prepared and submitted 30+ payroll and project management invoices weekly in Microsoft Dynamics 365.</li>
+            <li>Ran monthly accounts receivable closings that supported operational reporting.</li>
             <li>Created 300+ backup invoices in one week to support audit and billing requirements.</li>
           </ul>
-        </li>
+        </div>
+      </div>
 
-        <li class="tl-item">
-          <p class="tl-date">Sep 2022 – Oct 2025</p>
-          <span class="tag tag-impact">Impact</span>
-          <h3>Lead Project Manager &amp; President</h3>
-          <p class="tl-org">Solar Chapter</p>
-          <ul>
-            <li>Managed a $15,000 clean water infrastructure project benefiting 983 villagers in Golo Ketak, Indonesia.</li>
-            <li>Led a team of 16 to identify suppliers, evaluate costs and negotiate procurement agreements.</li>
-            <li>Secured 130 million IDR (about $9,000 USD) in sponsorship from three sponsors.</li>
-          </ul>
-        </li>
-
-        <li class="tl-item">
-          <p class="tl-date">Dec 2023 – Sep 2024</p>
-          <span class="tag tag-work">Work</span>
-          <h3>Accountant</h3>
-          <p class="tl-org">Foss Home and Village · Seattle, WA</p>
+      <div class="entry">
+        <p class="entry-date">Dec 2023 — Sep 2024</p>
+        <div class="entry-body">
+          <h4>Accountant</h4>
+          <p class="entry-org">Foss Home and Village · Seattle, WA</p>
           <ul>
             <li>Resolved more than $30,000 in claims within three months, improving reimbursement collection.</li>
             <li>Reconciled accounts receivable, trust fund, pension plan and bank accounts monthly.</li>
             <li>Filed business license, property tax exemption and excise tax reports for regulatory compliance.</li>
           </ul>
-        </li>
+        </div>
+      </div>
 
-        <li class="tl-item">
-          <p class="tl-date">Aug 2023</p>
-          <span class="tag tag-edu">Education</span>
-          <h3>B.A. Operations &amp; Supply Chain Management and Information Systems</h3>
-          <p class="tl-org">University of Washington, Foster School of Business</p>
-          <p>Dean's List (Spring 2023) · Runner-Up, Strategic Management Case Competition (Summer 2023)</p>
-        </li>
+      <h3 class="group-title">Leadership &amp; impact</h3>
 
-        <li class="tl-item">
-          <p class="tl-date">Jan 2021 – May 2021</p>
-          <span class="tag tag-impact">Impact</span>
-          <h3>Volunteer Tax Preparer</h3>
-          <p class="tl-org">United Way of King County</p>
-          <p>Helped community members prepare their tax returns. Also awarded the Complete the Dream Scholarship (2021).</p>
-        </li>
+      <div class="entry">
+        <p class="entry-date">Oct 2021 — Oct 2025</p>
+        <div class="entry-body">
+          <h4>President &amp; Lead Project Manager</h4>
+          <p class="entry-org">Solar Chapter</p>
+          <ul>
+            <li>Managed a $15,000 clean water project benefiting 983 villagers in Golo Ketak, Indonesia.</li>
+            <li>Led a team of 16 to source suppliers, evaluate costs and negotiate procurement.</li>
+            <li>Secured 130 million IDR (about $9,000 USD) from three sponsors.</li>
+          </ul>
+        </div>
+      </div>
 
-      </ol>
+      <div class="entry">
+        <p class="entry-date">Jan — May 2021</p>
+        <div class="entry-body">
+          <h4>Volunteer Tax Preparer</h4>
+          <p class="entry-org">United Way of King County</p>
+        </div>
+      </div>
+
+      <h3 class="group-title">Education</h3>
+
+      <div class="entry">
+        <p class="entry-date">Expected Dec 2027</p>
+        <div class="entry-body">
+          <h4>M.S. Computational Finance &amp; Risk Management</h4>
+          <p class="entry-org">University of Washington</p>
+        </div>
+      </div>
+
+      <div class="entry">
+        <p class="entry-date">Aug 2023</p>
+        <div class="entry-body">
+          <h4>B.A. Operations &amp; Supply Chain Management and Information Systems</h4>
+          <p class="entry-org">University of Washington, Foster School of Business</p>
+          <p class="entry-note">Dean's List · Case Competition Runner-Up · Complete the Dream Scholarship</p>
+        </div>
+      </div>
+
     </section>
 
     <!-- ===== FOCUS AREAS: three cards ===== -->
