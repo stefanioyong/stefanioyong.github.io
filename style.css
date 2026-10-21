@@ -279,6 +279,29 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; col
 }
 .project-soon { border-style: dashed; }
 
+/* App card: screenshot on the left, details on the right */
+.app-card {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--blue);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.app-shot { display: block; background: var(--mist); border-right: 1px solid var(--line); }
+.app-shot img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top left; }
+.app-body { padding: 26px 28px; }
+.app-body h4 {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.app-body p:not(.project-tag) { font-size: 0.93rem; color: var(--slate); }
+.app-body a { display: inline-block; margin-top: 14px; font-size: 0.92rem; font-weight: 500; }
+
 /* Featured project card (clean water project) */
 .featured {
   background: var(--white);
@@ -519,6 +542,8 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; col
 
   .stats { grid-template-columns: repeat(2, 1fr); }
   .hobbies { grid-template-columns: repeat(2, 1fr); }
+  .app-card { grid-template-columns: 1fr; }
+  .app-shot { border-right: none; border-bottom: 1px solid var(--line); aspect-ratio: 16 / 10; }
   .stat:nth-child(3) { border-left: none; }
   .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
 }
