@@ -404,9 +404,37 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; col
   border: 1px solid var(--line);
   border-radius: 12px;
   padding: 22px 26px;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 .tl-item.right { margin-left: calc(50% + 40px); }   /* script.js puts every second entry on the right */
+.tl-item.stagger { margin-top: -64px; }              /* lets left and right cards slot in beside each other */
+
+/* "Show details" toggle for each entry's bullet points */
+.tl-more summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--dot);
+}
+.tl-more summary::-webkit-details-marker { display: none; }
+.tl-more summary::before { content: "Show details"; }
+.tl-more[open] summary::before { content: "Hide details"; }
+.tl-more summary::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-left: 8px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-3px) rotate(45deg);
+}
+.tl-more[open] summary::after { transform: translateY(0) rotate(-135deg); }
+.tl-more summary:hover { text-decoration: underline; }
+.tl-more ul { margin-top: 8px; }
 .tl-item::before {             /* the coloured dot on the centre line */
   content: "";
   position: absolute;
@@ -539,6 +567,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; col
   .timeline::before { left: 5px; }
   .tl-item,
   .tl-item.right { width: auto; margin-left: 30px; }
+  .tl-item.stagger { margin-top: 0; }
   .tl-item::before,
   .tl-item.right::before { left: -31px; right: auto; }
 

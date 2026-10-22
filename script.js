@@ -40,8 +40,10 @@ function applyFilter(filter) {
   entries.forEach(function (entry) {
     const visible = filter === "all" || entry.classList.contains(filter);
     entry.hidden = !visible;
-    // Alternate visible entries left and right for the zig-zag
+    // Alternate visible entries left and right for the zig-zag,
+    // and let each one after the first slot in beside the previous card
     entry.classList.toggle("right", visible && shown % 2 === 1);
+    entry.classList.toggle("stagger", visible && shown > 0);
     if (visible) shown++;
   });
   filterButtons.forEach(function (button) {
