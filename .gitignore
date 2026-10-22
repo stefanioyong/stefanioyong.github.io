@@ -1,5 +1,3 @@
+
 # Files used only for previewing the site locally; not part of the website
 .claude/
-
-# Private handoff files with real business data; never publish
-private-handoff/
