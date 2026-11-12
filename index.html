@@ -94,6 +94,7 @@
         <li>SQL</li>
         <li>Crystal Ball</li>
         <li>Power BI</li>
+        <li>AI tools (Claude, Copilot)</li>
       </ul>
 
       <h3 class="pill-label">Accounting systems</h3>
@@ -364,8 +365,8 @@
     </section>
 
     <!-- ================= PAGE: PROJECTS =================
-         Two groups: analysis projects and dance.
-         When a project is ready, replace a "coming soon" card with a real one:
+         Groups: featured, apps & tools, analysis & research, and dance.
+         A simple text card for a future project looks like this:
            <article class="project">
              <p class="project-tag">Risk modelling</p>
              <h4>Project title</h4>
@@ -441,23 +442,33 @@
         </div>
       </article>
 
-      <!-- Analysis & research: hidden until the first real project is ready.
-           To show it again, remove this comment's opening and closing lines
-           and replace the "Coming soon" cards with real project cards.
+      <!-- Analysis & research: quant and risk projects, each in its own GitHub repository -->
       <h3 class="subhead">Analysis &amp; research</h3>
-      <div class="projects">
-        <article class="project project-soon">
-          <p class="project-tag">Coming soon</p>
-          <h4>Risk &amp; quantitative projects</h4>
-          <p>I'm building projects from my M.S. in Computational Finance and Risk Management. Check back soon.</p>
-        </article>
-        <article class="project project-soon">
-          <p class="project-tag">Coming soon</p>
-          <h4>Energy &amp; sustainability analysis</h4>
-          <p>Data projects exploring the energy transition and the numbers behind it.</p>
-        </article>
-      </div>
-      end of hidden Analysis & research section -->
+      <article class="app-card app-card-chart">
+        <a class="app-shot" href="https://github.com/stefanioyong/energy-var-model" target="_blank" rel="noopener">
+          <img src="assets/energy-var-chart.png" alt="Chart of Henry Hub natural gas daily returns from 2020 to 2026 with two 99% VaR lines: historical simulation stays flat while the Monte Carlo line widens after each price spike. Breach days are marked.">
+        </a>
+        <div class="app-body">
+          <p class="project-tag">Risk modelling · Python</p>
+          <h4>Energy Commodity Risk Model: VaR &amp; Expected Shortfall</h4>
+          <p>
+            How much could a long natural gas position lose in one day, and can
+            that number be trusted? I estimated 1-day 95% and 99% VaR and
+            expected shortfall for Henry Hub gas four ways: historical
+            simulation, normal, Student-t and Monte Carlo. Then I backtested
+            each one on 4,223 days of data with the Kupiec and Christoffersen
+            tests.
+          </p>
+          <p>
+            Only the Monte Carlo model with EWMA volatility and fat-tailed
+            shocks passed all three tests at 99%. The normal model understated
+            losses on breach days by a factor of 1.7.
+          </p>
+          <p class="app-links">
+            <a href="https://github.com/stefanioyong/energy-var-model" target="_blank" rel="noopener">View the code and results on GitHub →</a>
+          </p>
+        </div>
+      </article>
 
       <h3 class="subhead">Dance</h3>
       <div class="projects">
